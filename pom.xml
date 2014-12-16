@@ -93,9 +93,9 @@
 
 		<profile>
 			<id>wildfy82-managed</id>
-			<activation>
+<!-- 			<activation>
 				<activeByDefault>true</activeByDefault>
-			</activation>
+			</activation> -->
 			<!-- the dependencies for Wildfly8.2 -->
 			<dependencies>
 				<dependency>
@@ -109,7 +109,7 @@
 					<version>1.0.0.Final</version>
 					<type>pom</type>
 					<scope>provided</scope>
-				</dependency>				
+				</dependency>
 			</dependencies>
 
 			<build>
@@ -164,6 +164,28 @@
 			</build>
 		</profile>
 
+		<profile>
+			<id>wildfly82-remote</id>
+			<dependencies>
+				<dependency>
+					<groupId>org.jboss.spec</groupId>
+					<artifactId>jboss-javaee-7.0</artifactId>
+					<version>1.0.0.Final</version>
+					<type>pom</type>
+					<scope>provided</scope>
+				</dependency>
+				<dependency>
+					<groupId>org.wildfly</groupId>
+					<artifactId>wildfly-arquillian-container-remote</artifactId>
+					<version>8.2.0.Final</version>
+				</dependency>
+				<dependency>
+					<groupId>org.jboss.arquillian.protocol</groupId>
+					<artifactId>arquillian-protocol-servlet</artifactId>
+					<scope>test</scope>
+				</dependency>
+			</dependencies>
+		</profile>
 	</profiles>
 
 </project>
